@@ -296,13 +296,13 @@ def experiment(e_load, monitor_len, e_dur, resolution=1.0, v_resolution=0.2, e_i
     plt.ylabel("Egress Variance", fontsize=20)
     plt.title(e_topic, fontsize=20)
 
-    figg1.savefig("%s_corr_index_%s_load_%s_sp_%s.eps"
+    figg1.savefig("data/%s_corr_index_%s_load_%s_sp_%s.eps"
                  % (e_topic, e_index, e_load, v_resolution),
                  format='eps', dpi=1000)
-    figg2.savefig("%s_traffic_index_%s_load_%s_sp_%s.eps"
+    figg2.savefig("data/%s_traffic_index_%s_load_%s_sp_%s.eps"
                  % (e_topic, e_index, e_load, v_resolution),
                  format='eps', dpi=1000)
-    figg3.savefig("%s_evar_index_%s_load_%s_sp_%s.eps"
+    figg3.savefig("data/%s_evar_index_%s_load_%s_sp_%s.eps"
                  % (e_topic, e_index, e_load, v_resolution),
                  format='eps', dpi=1000)
 
@@ -382,9 +382,9 @@ if __name__ == '__main__':
     dur = 90
 
     indexes = [i for i in range(0, 1)]
-    topics = ["Deadlock"]  # , "Bursty Workload", "CPU cap"]  # , "exp", "hv"]
+    topics = ["Normal"]  # , "Bursty Workload", "CPU cap"]  # , "exp", "hv"]
     loads = [0.04, 0.11]
-    
+
     interf_time = []
     burst_time = []
     resize_time = []
